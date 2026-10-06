@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-canvas text-ink-900 font-sans antialiased;
+}
+
+/* Headings: bold sans next to italic serif accent */
+.h-display {
+  @apply text-4xl md:text-5xl font-semibold tracking-tight text-ink-900;
+}
+.h-display .accent {
+  @apply font-serif italic font-normal text-ink-400;
+}
+
+.eyebrow {
+  @apply text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-red;
+}
+
+/* Pill / badge */
+.pill {
+  @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium;
+}
+
+/* Card surface */
+.card {
+  @apply bg-paper rounded-2xl border border-ink-100 shadow-soft;
+}
+
+/* Subtle row hover */
+.row-hover {
+  @apply hover:bg-ink-100/60 transition-colors;
+}
+
+/* Inputs */
+.input {
+  @apply w-full rounded-lg border border-ink-200 bg-white px-3 py-2 text-sm
+         text-ink-900 placeholder:text-ink-400
+         focus:outline-none focus:ring-2 focus:ring-brand-green/30 focus:border-brand-green/60;
+}
+
+.label {
+  @apply block text-xs font-medium uppercase tracking-wider text-ink-500 mb-1.5;
+}
+
+/* Scrollbar in sidebar / tables */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
